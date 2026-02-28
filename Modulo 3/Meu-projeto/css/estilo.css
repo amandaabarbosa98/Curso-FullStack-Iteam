@@ -1,13 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+    display : flex;
+    flex-direction: column;
+    justify-content: center ;
 }
 
 header{
-    color:gray;
+    color: #000;
     text-align: center;
-    background-color: beige;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(214, 204, 204);
     font-size: 15px;
     padding: 15px;
     display: flex;
@@ -15,26 +23,63 @@ header{
     justify-content: space-between;
     align-items: self-end;
 }
+header .felicitacoes {
+    display: flex;
+    justify-content: row;
+    padding: 10px;
+    font-size: large;
+}
 
 header nav ul{
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap:12px;
     list-style: none;
 }
-header nav ul li{
-    font-size: 18px;
+
+header nav ul a{
+    text-decoration : none;
+    color: #000;
+    font-size: 20px;
 }
-main div{
-    justify-content: center;
+main{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 .imagem{
     display: flex;
     justify-content: center;
+    
 }
 img{
+    display: flex;
+    flex-direction: row;
     width: 30%;
     border: 10px solid black; 
-    border-radius: 10%;
+    border-radius: 10%;    
 }
+main div h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+main div p{
+    display: flex;
+    justify-content: left;
+}
+main section h2{
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+}
+main section ul{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    color: #000;
+    list-style: none;
+}
+
