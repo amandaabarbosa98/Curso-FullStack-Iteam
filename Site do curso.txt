@@ -1,0 +1,28 @@
+Site do curso: 
+https://thiagocidade.github.io/curso-desenvolvimento-web/
+
+Site de tags:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+
+
+# Configurar seu nome (aparecera nos commits)
+git config --global user.name "Seu Nome"
+
+# Configurar seu e-mail (use o mesmo do GitHub)
+git config --global user.email "seu-email@exemplo.com"
+
+# Verificar configuracoes
+git config --list
+
+#Sair do git 
+git config --global --unset user.name
+
+git config --global --unset user.email 
+
+------------------------------------------------------------------------------------
+Fontes do google:
+fonts.google.com
+
+Gerador de sombras 
+
+font awesome cdn cndj.com
