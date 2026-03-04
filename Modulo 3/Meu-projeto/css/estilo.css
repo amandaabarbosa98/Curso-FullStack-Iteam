@@ -3,24 +3,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: #f5f5f5;
     display : flex;
     flex-direction: column;
-    justify-content: center ;
+    justify-content: center;
 }
 
 header{
     color: #000;
     text-align: center;
-    background-color: rgb(214, 204, 204);
+    background-color:#4B0082;
     font-size: 15px;
-    padding: 15px;
+    padding: 15px 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: sticky;
+    flex-wrap: wrap;
+    position: sticky; /* Mantém o menu no topo ao rolar */
+    top: 0;
+    z-index: 1000;
 }
 header nav{
     display: flex;
@@ -42,25 +48,99 @@ header nav ul{
 
 header nav ul a{
     text-decoration : none;
-    color: #000;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+header nav ul a:hover {
+    color: #C8A2FF; /* Efeito de destaque ao passar o mouse */
+}
+header .felicitacoes:hover {
+    color: #C8A2FF; /* Efeito de destaque ao passar o mouse */
+}
+header h1, header .header-p, header .felicitacoes {
+    color: #fff;
 }
 main{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 .imagem{
     display: flex;
     justify-content: center;
-    
+    background-color: #C8A2FF;
+    padding: 40px 0;
 }
 img{
     display: flex;
-    flex-direction: row;
-    width: 30%;
-    border: 10px solid black; 
-    border-radius: 10%;    
+    flex-direction: column;
+    width: 250px; 
+    height: 250px;
+    border: 4px solid white; 
+    border-radius: 50%;    
+}
+/* --- SEÇÃO SOBRE --- */
+main .secao{
+    text-align: center;
+    padding: 20px 0;
+
+}
+main .sobre{
+    scroll-margin-top: 84px;
+}
+.texto-sobre {
+    max-width: 800px; /* Limita largura para leitura confortável */
+    margin: 0 auto; /* Centraliza o bloco */
+    background-color: rgb(214, 204, 204);
+    padding: 20px;
+    border-radius: 10px; /* Arredondamento mais suave que 50px */
+}
+
+.texto-sobre p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.3; /* Melhora o espaçamento entre linhas */
+}
+
+
+
+main .container{
+    display: flex;
+    flex-direction: column;
+    background-color:  #C8A2FF;
+    
+} 
+main div .secao{
+    height: 210px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    gap:10px;
+}
+
+
+main .grid-projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;  
+    align-items: stretch; 
+}
+main .card{
+    background-color:rgb(214, 204, 204);
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+main .card-conteudo{
+    padding: 20px;
+}
+main .card-conteudo h3{
+    margin-top: 10px;
+    color: blueviolet;
+    align-items: center;
+
 }
 main .sobre{
     display: flex;
@@ -69,46 +149,174 @@ main .sobre{
 }
 main div h2{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
     padding: 10px;
 }
 main div p{
     display: flex;
     font-size: 18px;
-    justify-content: left;
-    background-color: rgb(214, 204, 204);
+    justify-content: center;
     padding: 20px;
-    width: 85%;
+    max-width: 800px;
+    margin: 0 auto;
+
 }
 main section h2{
     display: flex;
     padding: 2px;
     justify-content: center;
 }
-main section ul{
+main section div{
     display: flex;
     font-size: 20px;
     justify-content: center;
-    padding: 20px;
-    gap: 20px;
+    gap: 4px;
+    padding: 10px;
     color: #000;
     list-style: none;
     flex-wrap: wrap;
 }
-main section ul li{
+main section div li{
     display: flex;
     background-color: rgb(214, 204, 204);
     align-items: center;
-    padding: 5%;
+    justify-content: center;
+    padding: 2%;
+    border-radius: 50px;
+}
+.card-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+main .contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .contato p{
+    display: flex;
+    align-items: center;
+}
+main .contato-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+main .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    align-items: flex-start;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid  rgb(214, 204, 204);
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color:  rgb(214, 204, 204) ;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #4B0082;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+}
+.btn :active{
+    transform: scale(0.95);
+}
+.btn2 {
+    display: inline-block;
+    background-color: #4B0082;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn2 :active{
+    transform: scale(0.95);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    scroll-margin-top: 84px;
+
+    
+}
+.formulario h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+main .algo{
+    text-align: center;
+    color: #4B0082;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+main section div li:hover{
+   transform: translateY(-5px)
+}
+footer {
+    background-color: rgb(214, 204, 204);
 }
 footer h2{
     display: flex;
+    font-size: 20px;
+    font-weight: 450;
     padding: 2px;
     justify-content: center;
+    color: #4B0082;
 }
-footer ul{
+footer .minhas-redes{
     display: flex;
     font-size: 20px;
     justify-content: center;

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    height: 210px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    gap:10px;
+
+}
+
+.card .imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: bisque;
+}
+
+.card .imagem .fa-user{
+    font-size: 25px;
+}
+.info h2{
+    color: orangered;
+}
+.info h1{
+    color:blueviolet;
+}
+
+.card .info{
+    padding: 10px;
+}
+

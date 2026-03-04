@@ -16,56 +16,133 @@
 
 </head>
 <body>
-    <header>
-    <div class="nome">
-        <h1>Amanda Barbosa</h1>
-        <p class="header-p">Estudante de Desenvolvimento Web</p>
-    </div>
-    <div class="felicitacoes">
-        <h2>Seja bem vindo</h2>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#" target="_self">Home</a></li>
-            <li><a href="#" target="_self">Sobre</a></li>
-            <li><a href="#" target="_self">Contato</a></li>
-        </ul>
-    </nav>
+    <header id="header">
+        <div class="nome">
+            <h1>Amanda Barbosa</h1>
+            <p class="header-p">Estudante de Desenvolvimento Web</p>
+        </div>
+        <div class="felicitacoes">
+            <h2>Seja bem vindo</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" target="_self">Home</a></li>
+                <li><a href="#sobre" target="_self">Sobre</a></li>
+                <li><a href="#contato" target="_self">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    <hr>
     <main>
         <div class="imagem">
             <img src="img/imagem.png" alt="Minha imagem">
         </div>
-        <div class="sobre">
+        <section id="sobre" class="sobre">
             <h2>Sobre Mim</h2>
-            <p> 
-             Acadêmica de Ciência da Computação (UFRR) | Desenvolvedora Full Stack em formação pelo ITEAM | Pesquisadora em tecnologia</p>
+            <div class="texto-sobre">
+            <p>
+             Acadêmica de Ciência da Computação (UFRR) | Desenvolvedora Full Stack em formação pelo ITEAM | Pesquisadora em tecnologia.</p>
+            <p>Meu nome é Amanda, tenho 27 anos e esse é meu portifólio, sou formada em Informática pelo IFRR e atualmente curso Ciência da Computação na UFRR</p>
+            <a href="https://lattes.cnpq.br/6332432472570466" target="_blank" class="btn2">Ver meu curriculo</a>    
+            </div>
+        </section>
+        <section class="minhas-habilidades">
+            <h2>Minhas Habilidades</h2>
+            <div lista-habilidades>
+                <li>HTML<i class="fa-brands fa-html5"></i></li>
+                <li>CSS<i class="fa-brands fa-css"></i></li>
+                <li>Python<i class="fa-brands fa-python"></i></li>
+                <li>JavaScript<i class="fa-brands fa-js"></i></li>
+                <li>Design<i class="fa-solid fa-palette"></i></li>
+            </div>
+        </section>
+        <section class="secao" id="projetos">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <p class="secao-descricao">Aqui estão alguns projetos dos quais faço/fiz parte.</p>
+
+                <div class="grid-projetos">
+                    <div class="card">
+                        <div class="card-img">
+                            <div class="placeholder-img"><img src="img/imagem-projeto-1.png" alt="imagem-projeto-1"></div>
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Maloca iCoisas</h3>
+                            <p>Este curso de capacitação e aperfeiçoamento em IoT objetivando a construção de soluções hospitalares para Roraima (denominado de Maloca das iCoisas)</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <div class="placeholder-img"><img src="img/imagem-projeto-2.png" alt="imagem-projeto-2"></div>
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Pet Saúde Digital</h3>
+                            <p>Inovação tecnológica como ferramenta de acesso à saúde em áreas remotas.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <div class="placeholder-img"><img src="img/imagem-projeto-3.png" alt="imagem-projeto-3"></div>
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Fique Sabendo</h3>
+                            <p>Informativos que divulgavam trabalhos de mulheres na aréa de STEAM no Instagram do DCC-RR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id= "contato" class="formulario">
+        <div  class="contato">
+            <h2>Contato</h2>
+            <p class="algo">Tem alguma pergunta ou quer entrar em contato? Preencha o formulário abaixo!</p>
+            <div class="contato-grid">
+                    <div class="contato-form">
+                        <form id="form-contato">
+                            <div class="form-group">
+                                <label for="nome">Nome *</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                                <span class="mensagem-erro"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                <span class="mensagem-erro"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="assunto">Assunto</label>
+                                <select id="assunto" name="assunto">
+                                    <option value="">-- Selecione --</option>
+                                    <option value="duvida">Dúvida</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="proposta">Proposta</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
         </div>
-        <section>
-        <h2>Minhas Habilidades</h2>
-        <ul>
-            <li>HTML<i class="fa-brands fa-html5"></i></li>
-            <li>CSS<i class="fa-brands fa-css"></i></li>
-            <li>Python<i class="fa-brands fa-python"></i></li>
-            <li>JavaScript<i class="fa-brands fa-js"></i></li>
-            <li>Design<i class="fa-solid fa-palette"></i></li>
-        </ul>
         </section>
     </main>
     <footer>
-    <h2>Minhas redes</h2>
-    <!-- Pelo menos 3 links externos abrindo em nova aba -->
-    <ul>
-        <li><a href="https://www.linkedin.com/in/amanda-de-brito-747010295/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/amandaabarbosa98" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="https://www.instagram.com/amandaabarbosa__/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-    </ul>
+        <h2>Minhas redes</h2>
+        <ul class="minhas-redes">
+            <li><a href="https://www.linkedin.com/in/amanda-de-brito-747010295/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/amandaabarbosa98" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/amandaabarbosa__/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
 
-    <hr>
-
-    <p><small>&copy; 2026 Amanda Barbosa. Todos os direitos reservados.</small></p>
+        <p><small>&copy; 2026 Amanda Barbosa. Todos os direitos reservados.</small></p>
+        <p><small> Projeto Final - Fundamentos de Desenvolvimento Web</small></p>
     </footer>
 </body>
-
 </html>
