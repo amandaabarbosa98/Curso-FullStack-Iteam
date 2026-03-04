@@ -14,7 +14,6 @@ body{
 }
 
 header{
-    color: #000;
     text-align: center;
     background-color:#4B0082;
     font-size: 15px;
@@ -24,7 +23,7 @@ header{
     justify-content: space-between;
     position: sticky;
     flex-wrap: wrap;
-    position: sticky; /* Mantém o menu no topo ao rolar */
+    position: sticky; 
     top: 0;
     z-index: 1000;
 }
@@ -53,10 +52,10 @@ header nav ul a{
     transition: color 0.3s;
 }
 header nav ul a:hover {
-    color: #C8A2FF; /* Efeito de destaque ao passar o mouse */
+    color: #C8A2FF; 
 }
 header .felicitacoes:hover {
-    color: #C8A2FF; /* Efeito de destaque ao passar o mouse */
+    color: #C8A2FF; 
 }
 header h1, header .header-p, header .felicitacoes {
     color: #fff;
@@ -90,17 +89,17 @@ main .sobre{
     scroll-margin-top: 84px;
 }
 .texto-sobre {
-    max-width: 800px; /* Limita largura para leitura confortável */
-    margin: 0 auto; /* Centraliza o bloco */
+    max-width: 800px; 
+    margin: 0 auto; 
     background-color: rgb(214, 204, 204);
     padding: 20px;
-    border-radius: 10px; /* Arredondamento mais suave que 50px */
+    border-radius: 10px; 
 }
 
 .texto-sobre p{
     font-size: 20px;
     margin-bottom: 20px;
-    line-height: 1.3; /* Melhora o espaçamento entre linhas */
+    line-height: 1.3; 
 }
 
 
@@ -133,8 +132,11 @@ main .card{
     overflow: hidden;
 
 }
+.card:hover {
+    transform: scale(1.03); 
+}
 main .card-conteudo{
-    padding: 20px;
+    padding: 10px;
 }
 main .card-conteudo h3{
     margin-top: 10px;
@@ -185,6 +187,9 @@ main section div li{
     padding: 2%;
     border-radius: 50px;
 }
+main section div li:hover{
+    transform: scale(1.03);
+}
 .card-img {
     height: 200px;
     overflow: hidden;
@@ -215,6 +220,9 @@ main .contato{
 main .contato p{
     display: flex;
     align-items: center;
+}
+main .contato p i{
+    font-size: 25px;
 }
 main .contato-grid{
     display: flex;
@@ -302,9 +310,6 @@ main .algo{
     margin-right: auto;
     
 }
-main section div li:hover{
-   transform: translateY(-5px)
-}
 footer {
     background-color: rgb(214, 204, 204);
 }
@@ -315,6 +320,7 @@ footer h2{
     padding: 2px;
     justify-content: center;
     color: #4B0082;
+    border-radius: 50px;
 }
 footer .minhas-redes{
     display: flex;
@@ -324,6 +330,7 @@ footer .minhas-redes{
     gap: 20px;
     color: #000;
     list-style: none;
+    margin: 15px 0;
 }
 footer ul li a i{
     color: #000;
@@ -346,6 +353,6 @@ footer ul li a .fa-instagram:hover{
 footer p{
     display: flex;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 450;
 }
